@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using Tediu.FoodOrder.website.Models.EFModel;
 using Tediu.FoodOrder.website.Models.Service;
 
 namespace Tediu.FoodOrder.website.Controllers
@@ -29,10 +30,11 @@ namespace Tediu.FoodOrder.website.Controllers
         // POST: FoodController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(IFormCollection collection,FoodTableModel Model)
         {
             try
             {
+                service.Create(Model);
                 return RedirectToAction(nameof(Index));
             }
             catch
