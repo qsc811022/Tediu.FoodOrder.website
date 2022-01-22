@@ -17,6 +17,11 @@ namespace Tediu.FoodOrder.website.Models.Service
             return repo.getall();
         }
         
+        public void Create(FoodTableModel model)
+        {
+           if(model.Name)
+           repo.Create(model);
+        }
 
     }
 }

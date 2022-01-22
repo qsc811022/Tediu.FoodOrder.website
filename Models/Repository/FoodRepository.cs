@@ -27,7 +27,12 @@ namespace Tediu.FoodOrder.website.Models.Repository
 
         public void Create(FoodTableModel Model)
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(datasouce))
+            {
+                var sql = $"Insert into {TableName}(FoodName,FoodPrice,dep,Name)Values(@FoodName,@FoodPrice,@dep,@Name)";
+                conn.Execute(sql,new{ Model});
+
+            }
         }
 
         public void Delete(int id)
