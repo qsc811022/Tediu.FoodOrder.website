@@ -12,21 +12,18 @@ namespace Tediu.FoodOrder.website.Models.EFModel
         public int id { get; set; }
 
         [DisplayName("品項")]
-        [Required]
-        [MaxLength(10)]
+
         public string FoodName { get; set; }
 
         [DisplayName("價格")]
-        [Required]
-        [MaxLength(10)]
+
         public int FoodPrice { get;set;}
 
         [DisplayName("部門")]
-        [Required]
         public string dep { get;set;}
 
         [DisplayName("姓名")]
-        [Required]
+
         public string Name { get;set;}
 
     }

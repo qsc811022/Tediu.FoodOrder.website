@@ -29,8 +29,9 @@ namespace Tediu.FoodOrder.website.Models.Repository
         {
             using (var conn = new SqlConnection(datasouce))
             {
-                var sql = $"Insert into {TableName}(FoodName,FoodPrice,dep,Name)Values(@FoodName,@FoodPrice,@dep,@Name)";
-                conn.Execute(sql,new{ Model});
+                //string sql = $"INSERT INTO {tableName}(Name,Capacity,Enabled)VALUES(@Name,@Capacity,@Enabled)";
+                var sql = $"INSERT INTO {TableName}(FoodName,FoodPrice,dep,Name)VALUES(@FoodName,@FoodPrice,@dep,@Name)";
+                conn.Execute(sql,Model);
 
             }
         }

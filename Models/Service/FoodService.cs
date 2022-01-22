@@ -19,7 +19,7 @@ namespace Tediu.FoodOrder.website.Models.Service
         
         public void Create(FoodTableModel model)
         {
-           if(model.FoodName.Length>10) throw new Exception("Name 太長");
+          
             repo.Create(model);
         }
 
